@@ -18,17 +18,27 @@ a {
   color: #000000;
 }
 a:hover {
-  color: #ddddec;
+  color: #090977;
 }
 a:active {
   color: #6c9025;
 }
-a:link {
-  color: #272590;
+#layout1 a[href="index.html"]{
+  color: #25902c;
+  font-weight: 900;
+  font-size: 32px;
 }
-a:visited {
-  color: #322590;
+#layout2 a[href="layout2.html"]{
+  color: #25902c;
+  font-weight: 900;
+  font-size: 32px;
 }
+#layout3 a[href="layout3.html"]{
+  color: #25902c;
+  font-weight: 900;
+  font-size: 32px;
+}
+
 header,
 main,
 footer,
@@ -68,11 +78,11 @@ h5 {
   color: #000000;
 }
 header > section {
-  margin-left: 30%;
+  margin-left: 40%;
 }
 header a {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 52px;
   margin-left: 18px;
   width: 100px;
   height: 100px;
@@ -193,10 +203,13 @@ footer {
   width: 90%;
 }
 #layout3 .textbox {
-  margin-left: 105px;
+  margin-left: 38px;
   margin-top: 123px;
   width: 372px;
   height: 995px;
+}
+#layout3 .textbox a {
+  margin-left: 18px;
 }
 .leftsidebar {
   margin-top: 0px;
@@ -246,8 +259,9 @@ footer {
     height: 105px;
     display: flex;
     margin-top: 45px;
-    margin-left: 0px;
+    margin-left: 1.25%;
   }
+  
   #layout3 a {
     margin-left: 12px;
   }
@@ -308,47 +322,9 @@ footer {
   .maincontainer {
     width: 111%;
   }
-  /* #layout3 .textbox {
-       font-size: 10px;
-       height: 105px;
-       display: flex;
-       margin-top: 45px;
-       margin-left: 0px;
-    } */
-  /* #layout3 a{
-        margin-left: 12px;
-    } */
-  /* .leftsidebar {
-        margin-top: 0px;
-        width: 100% ;
-        height: 105px;
-        background-color: #E5E5E5;
-        display: flex;
-    } */
   .yellow_background {
     background-color: #ffff00;
     width: 111%;
     height: 474px;
   }
-  /* #layout3 header {
-        width: 100%;
-        height: 123px;
-        background-color: #F2E9E9;
-    } */
-  /* #box {
-        width: 60px;
-        height: 60px;
-        background-color: #000000;
-        margin-top: 21px;
-        margin-right: 24px;
-        float: right;
-    } */
-  /* #layout3 nav {
-        width: 0;
-        height: 0px;
-    } */
-  /* #layout3 footer {
-        margin-top: 0px;
-        width: 100%;
-    } */
 }
