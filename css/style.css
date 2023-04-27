@@ -23,17 +23,17 @@ a:hover {
 a:active {
   color: #6c9025;
 }
-#layout1 a[href="index.html"]{
+#layout1 a[href="index.html"] {
   color: #25902c;
   font-weight: 900;
   font-size: 32px;
 }
-#layout2 a[href="layout2.html"]{
+#layout2 a[href="layout2.html"] {
   color: #25902c;
   font-weight: 900;
   font-size: 32px;
 }
-#layout3 a[href="layout3.html"]{
+#layout3 a[href="layout3.html"] {
   color: #25902c;
   font-weight: 900;
   font-size: 32px;
@@ -214,7 +214,8 @@ footer {
 .leftsidebar {
   margin-top: 0px;
   width: 372px;
-  height: 995px;
+  min-height: 995px;
+  height: auto;
   background-color: #e5e5e5;
   display: inline-flex;
 }
@@ -228,7 +229,7 @@ footer {
   height: 123px;
   background-color: #f2e9e9;
 }
-#box {
+#addSquare {
   width: 80px;
   height: 80px;
   background-color: #000000;
@@ -237,22 +238,33 @@ footer {
   float: right;
 }
 #layout3 nav {
+  display: flex;
   width: 104px;
-  height: 995px;
+  min-height: 1120px;
   background-color: #1847ef4d;
   position: absolute;
   right: 0;
 }
 #layout3 footer {
   margin-top: 0px;
+  width: 111%;
+}
+.game {
+  width: 66%;
+  height: 80%;
 }
 @media all and (max-width: 500px) {
   #layout3 {
     margin: 0;
     width: 90%;
   }
+  .cardName {
+    color: #25902c;
+  }
   #layout3 .maincontainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   #layout3 .textbox {
     font-size: 10px;
@@ -261,14 +273,14 @@ footer {
     margin-top: 45px;
     margin-left: 1.25%;
   }
-  
+
   #layout3 a {
     margin-left: 12px;
   }
   .leftsidebar {
     margin-top: 0px;
     width: 100%;
-    height: 105px;
+    min-height: 105px;
     background-color: #e5e5e5;
     display: flex;
   }
@@ -282,7 +294,7 @@ footer {
     height: 123px;
     background-color: #f2e9e9;
   }
-  #box {
+  #addSquare {
     width: 60px;
     height: 60px;
     background-color: #000000;
@@ -291,12 +303,29 @@ footer {
     float: right;
   }
   #layout3 nav {
-    width: 0;
+    width: 0px;
     height: 0px;
+    display: none;
   }
   #layout3 footer {
     margin-top: 0px;
     width: 100%;
+  }
+  #play {
+    margin-left: 20px;
+    display: inline-block;
+    padding: 1rem !important;
+    margin: 25px;
+  }
+  #reset {
+    margin-top: 25px;
+    padding: 1rem !important;
+    margin-left: 50px;
+  }
+  .gameButtons {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -327,4 +356,58 @@ footer {
     width: 111%;
     height: 474px;
   }
+}
+.square {
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  font-size: large;
+  color: #f2e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#squaresSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#oddAmountAlert {
+  color: red;
+  display: none;
+}
+
+#winAlert {
+  color: green;
+  display: none;
+}
+
+.notification {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+  border-radius: 0px;
+}
+
+#layout3 section {
+  display: flex;
+}
+
+#play {
+  margin-left: 20px;
+  left: 0;
+  float: left;
+  position: absolute;
+}
+#reset {
+  position: absolute;
+  left: 20%;
+}
+
+#layout3 .cardName {
+  color: #25902c;
 }
