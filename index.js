@@ -42,6 +42,7 @@ addSquareButton.addEventListener("click", function () {
     html: `<section id="${state.lastSquareId}" class="square"></section>`,
     isFlipped: false,
     solved: false,
+    uniqueNumber: 0,
   };
   let squaresSection = document.getElementById("squaresSection");
   
@@ -102,9 +103,11 @@ function matchPairs() {
         const randomIndex2 = Math.floor(Math.random() * squaresIds.length);
         const randomSquareId2 = parseInt(squaresIds[randomIndex2]);
         squaresIds.splice(randomIndex2, 1);
-
+        const uniqueNumber = Math.floor(Math.random() * 1000);
         state.squares[randomSquareId1].match = randomSquareId2;
         state.squares[randomSquareId2].match = randomSquareId1;
+        state.squares[randomSquareId1].uniqueNumber = uniqueNumber;
+        state.squares[randomSquareId2].uniqueNumber = uniqueNumber;
       }
     }
   } else {
@@ -178,10 +181,10 @@ function CheckState() {
     const squareElement = document.getElementById(square.id);
     if (square.isFlipped) {
       squareElement.style.setProperty("background-color", "blue");
-      squareElement.innerHTML = square.match;
+      squareElement.innerHTML = square.uniqueNumber;
     } else if (square.solved) {
       squareElement.style.setProperty("background-color", "green");
-      squareElement.innerHTML = square.match;
+      squareElement.innerHTML = square.uniqueNumber;
     } else {
       squareElement.style.setProperty("background-color", "black");
       squareElement.innerHTML = '';
